@@ -13,8 +13,10 @@
 //! the problem to it rather than writing it again.
 
 mod ffi;
+mod http;
 
 pub use ffi::DescriptorAbi;
+pub use http::{Curl, Plan, Request, Response, ServerCall, CLIENT_ERROR, RETRYABLE_CLIENT_ERROR};
 
 /// The console whose flat address space is wanted. rcheevos keeps a table per
 /// console; the id is part of its API, not something we choose.
